@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import folium
 import pandas as pd
+from scipy.spatial import distance
 from geopy.distance import geodesic
 from folium.plugins import MarkerCluster
 from streamlit_folium import folium_static
@@ -19,7 +20,10 @@ user_lat = st.number_input("Enter your Latitude", value=51.5074)
 user_lon = st.number_input("Enter your Longitude", value=-0.1278)
 
 # Calculate the distance from the user to each pub using Euclidean distance
-df["Distance"] = df.apply(lambda row: geodesic((user_lat, user_lon), (row["latitude"], row["longitude"])).km, axis=1)
+#df["Distance"] = df.apply(lambda row: geodesic((user_lat, user_lon), (row["latitude"], row["longitude"])).km, axis=1)
+df["Distance"] = df.apply(lambda row: distance.euclidean((user_lat, user_lon), (row["latitude"], row["longitude"])), axis=1)
+
+
 
 # Get the 5 nearest pubs
 nearest_pubs = df.sort_values("Distance").head(5)
