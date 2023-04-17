@@ -32,6 +32,7 @@ st.markdown("#### Data Summary")
 st.markdown('###### Sample data')
 st.dataframe(df.head(5))
 
+
 count_la = df['local_authority'].value_counts().to_frame().reset_index()
 count_la.columns = ['local_authority', 'count']
 count_df=count_la[:10]
