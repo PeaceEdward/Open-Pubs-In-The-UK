@@ -3,6 +3,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
+import altair as alt
+
 
 
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pubs.csv"))
@@ -28,5 +30,20 @@ st.markdown("#### Data Summary")
 
 st.write('Sample data')
 st.dataframe(df.head(5))
+
+count_la = df['local_authority'].value_counts().to_frame().reset_index()
+count_la.columns = ['local_authority', 'count']
+count_df=count_la[:10]
+
+chart = alt.Chart(count_df).mark_bar().encode(
+    x='count:Q',
+    y=alt.Y('local_authority:N', sort='-x')
+).properties(
+    width=500,
+    height=400
+)
+
+# display the chart in Streamlit
+st.altair_chart(chart)
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
