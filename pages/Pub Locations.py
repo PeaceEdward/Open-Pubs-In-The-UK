@@ -21,7 +21,7 @@ if location_type == "Postal Code":
     location_input = st.selectbox("Select a Postal Code", df['postcode'].unique())
     pubs = df[df["postcode"] == location_input]
 else:
-    location_input = st.text_input("Select a Local Authority")
+    location_input = st.selectbox("Select a Local Authority",df['local_authority'])
     pubs = df[df["local_authority"] == location_input]
 
 # Display pubs on a map
