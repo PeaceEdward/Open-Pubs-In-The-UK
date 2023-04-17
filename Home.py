@@ -36,6 +36,7 @@ count_la = df['local_authority'].value_counts().to_frame().reset_index()
 count_la.columns = ['local_authority', 'count']
 count_df=count_la[:10]
 
+st.markdown('###### Local Authority with the most pubs')
 
 chart = alt.Chart(count_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
     x='count:Q',
@@ -44,7 +45,7 @@ chart = alt.Chart(count_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
     width=500,
     height=400
 ).configure_mark(
-    opacity=0.7,
+    opacity=0,
     strokeWidth=0
 )            
             
