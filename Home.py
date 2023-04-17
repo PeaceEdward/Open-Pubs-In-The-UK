@@ -7,7 +7,7 @@ from folium.plugins import MarkerCluster
 
 
 
-df = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "pubs.csv"))
+df = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pubs.csv"))
 
 st.markdown("# Summary Statistics")
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
