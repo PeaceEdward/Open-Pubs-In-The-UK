@@ -12,8 +12,8 @@ filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pu
 df=pd.read_csv(filepath)
 
 
+st.markdown("<h1 style='text-align: center; font-size: 24px;font-family: Georgia,serif;'>PUB LOCATIONS</h1>", unsafe_allow_html=True)
 
-st.markdown("# Pub Locations")
 
 # Get user input for postal code or local authority
 location_type = st.radio("Choose a location type", ["Postal Code", "Local Authority"])
