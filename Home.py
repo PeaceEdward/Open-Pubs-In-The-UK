@@ -16,7 +16,8 @@ st.markdown("<h1 style='text-align: center; font-size: 36px;'>OPEN PUBS IN THE U
 image= Image.open(image_path)
 st.image(image, use_column_width= True)
 
-st.write('<style> .subheader{ max-width: 100%; }</style>', style='text-align: center; unsafe_allow_html=True)
+st.write('<style> .subheader{ max-width: 100%; display: flex; align-items: center; }</style>', unsafe_allow_html=True)
+
 st.subheader("Pubs are establishments that serve alcoholic beverages,such as beer, wine, and spirits,along with snacks and other simple meals. They are a popular social gathering places and fun hangout spots for you, your friends and family with a lively atmosphere.")
 st.subheader('This app helps you browse and explore pubs in the United Kingdom and find those nearest to you.')
 st.markdown("# Data Summary")
