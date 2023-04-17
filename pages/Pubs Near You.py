@@ -15,7 +15,7 @@ df=pd.read_csv(filepath)
 st.markdown("# Find Pubs Near You")
 
 # Get user input for their latitude and longitude
-user_lat = st.number_input("Enter your Latitude", value=51.5074)
+user_lat = st.number_input("Enter your Latitude", value=int(input())
 user_lon = st.number_input("Enter your Longitude", value=-0.1278)
 
 # Calculate the distance from the user to each pub using Euclidean distance
