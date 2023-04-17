@@ -13,7 +13,9 @@ from streamlit_folium import folium_static
 
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pubs.csv"))
 df=pd.read_csv(filepath)
-st.markdown("# Find Pubs Near You")
+
+st.markdown("<h1 style='text-align: center; font-size: 24px;font-family: Georgia,serif;'>FIND PUBS NEAR YOU</h1>", unsafe_allow_html=True)
+
 
 # Get user input for their latitude and longitude
 user_lat = st.number_input("Enter your Latitude", value=51.5074)
