@@ -11,7 +11,7 @@ image_path=os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "pexel
 df=pd.read_csv(filepath)
 
 
-st.markdown("<h1 style='text-align: center; font-size: 18px;font-family: Georgia,serif;'>OPEN PUBS IN THE UK</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 30px;font-family: Georgia,serif;'>OPEN PUBS IN THE UK</h1>", unsafe_allow_html=True)
 
 image= Image.open(image_path)
 st.image(image, use_column_width= True)
