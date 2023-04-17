@@ -29,7 +29,7 @@ st.markdown("Pubs are establishments that serve alcoholic beverages,such as beer
 st.markdown('This app helps you browse and explore pubs and clubs in the United Kingdom and find those nearest to you.')
 st.markdown("#### Data Summary")
 
-st.write('Sample data')
+st.markdown('###### Sample data')
 st.dataframe(df.head(5))
 
 count_la = df['local_authority'].value_counts().to_frame().reset_index()
@@ -45,7 +45,7 @@ chart = alt.Chart(count_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
     width=500,
     height=400
 ).configure_mark(
-    opacity=0,
+    opacity=0.7,
     strokeWidth=0
 )            
             
