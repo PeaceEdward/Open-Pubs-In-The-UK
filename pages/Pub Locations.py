@@ -8,7 +8,7 @@ from folium.plugins import MarkerCluster
 
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pubs.csv"))
 
-pd.read_csv(filepath)
+df=pd.read_csv(filepath)
 
 
 
