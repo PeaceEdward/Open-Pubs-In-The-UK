@@ -37,7 +37,7 @@ count_la.columns = ['local_authority', 'count']
 count_df=count_la[:10]
 
 
-chart = alt.Chart(count_df).mark_bar().encode(
+chart = alt.Chart(count_df).mark_bar(strokeOpacity=0, color='#FF5733').encode(
     x='count:Q',
     y=alt.Y('local_authority:N', sort='-x')
 ).properties(
