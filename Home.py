@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
-import altair as alt
+import matplotlib.pyplot as plt
 
 
 
@@ -35,15 +35,15 @@ count_la = df['local_authority'].value_counts().to_frame().reset_index()
 count_la.columns = ['local_authority', 'count']
 count_df=count_la[:10]
 
-chart = alt.Chart(count_df).mark_bar().encode(
-    x='count:Q',
-    y=alt.Y('local_authority:N', sort='-x')
-).properties(
-    width=500,
-    height=400
-)
+fig, ax = plt.subplots(figsize=(12, 6))
+count_df.plot(kind='bar', x='local_authority', y='count', ax=ax)
 
-# display the chart in Streamlit
-st.altair_chart(chart)
+# Set the plot title and labels
+plt.title('Local Authority Counts')
+plt.xlabel('Local Authority')
+plt.ylabel('Count')
+
+# Show the plot in Streamlit
+st.pyplot(fig, width=0)
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
