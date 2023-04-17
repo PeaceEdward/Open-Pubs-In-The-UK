@@ -37,7 +37,7 @@ count_la.columns = ['local_authority', 'count']
 count_df=count_la[:10]
 
 
-count_df.plot(kind='bar', x='local_authority', y='count')
+fig=count_df.plot(kind='bar', x='local_authority', y='count')
 
 col1,col2=st.columns(2)
 # Set the plot title and labels
