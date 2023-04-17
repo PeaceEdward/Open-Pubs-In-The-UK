@@ -50,9 +50,26 @@ chart = alt.Chart(count_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
 )            
             
            
+st.markdown('###### Pubs with the most branches')
 
 # display the chart in Streamlit
 st.altair_chart(chart)
+
+count_name = df['name'].value_counts().to_frame().reset_index()
+count_name.columns = ['name', 'count']
+count_name_df=count_name[:5]
+
+chart1 = alt.Chart(count_name_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
+    x='count:Q',
+    y=alt.Y('name:N', sort='-x')
+).properties(
+    width=500,
+    height=400
+).configure_mark(
+    opacity=0.7,
+    strokeWidth=0
+)            
+st.altair_chart(chart1)
 
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
