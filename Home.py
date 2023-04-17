@@ -77,4 +77,4 @@ st.altair_chart(chart1)
 st.markdown('###### Summary statistics')
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
-st.write("The local authority with least number of pubs is West Lothian with only 2 pubs)
+st.write("The local authority with least number of pubs is West Lothian with only 2 pubs")
