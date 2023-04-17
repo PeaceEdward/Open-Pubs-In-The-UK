@@ -5,6 +5,7 @@ import pandas as pd
 import folium
 from geopy.distance import geodesic
 from folium.plugins import MarkerCluster
+from streamlit_folium import folium_static
 
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pubs.csv"))
 
