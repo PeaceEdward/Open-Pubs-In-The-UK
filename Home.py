@@ -43,7 +43,12 @@ chart = alt.Chart(count_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
 ).properties(
     width=500,
     height=400
-)
+).configure_mark(
+    opacity=0.7,
+    strokeWidth=0
+)            
+            
+           
 
 # display the chart in Streamlit
 st.altair_chart(chart)
