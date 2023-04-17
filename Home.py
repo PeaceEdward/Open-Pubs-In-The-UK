@@ -36,8 +36,8 @@ count_la = df['local_authority'].value_counts().to_frame().reset_index()
 count_la.columns = ['local_authority', 'count']
 count_df=count_la[:10]
 
-fig, ax = plt.subplots(figsize=(12, 6))
-count_df.plot(kind='bar', x='local_authority', y='count', ax=ax)
+
+count_df.plot(kind='bar', x='local_authority', y='count')
 
 col1,col2=st.columns(2)
 # Set the plot title and labels
