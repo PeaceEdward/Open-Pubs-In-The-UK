@@ -5,7 +5,7 @@ import folium
 from geopy.distance import geodesic
 from folium.plugins import MarkerCluster
 
-df = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "pubs.csv"))
+df = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pubs.csv"))
 
 
 
