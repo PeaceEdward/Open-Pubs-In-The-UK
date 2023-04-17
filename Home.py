@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import matplotlib.pyplot as plt
-import plotly.express as px
+import altair as alt
 
 
 
@@ -37,15 +37,16 @@ count_la.columns = ['local_authority', 'count']
 count_df=count_la[:10]
 
 
-fig=count_df.plot(kind='bar', x='local_authority', y='count')
+chart = alt.Chart(count_df).mark_bar().encode(
+    x='count:Q',
+    y=alt.Y('local_authority:N', sort='-x')
+).properties(
+    width=500,
+    height=400
+)
 
-col1,col2=st.columns(2)
-# Set the plot title and labels
-plt.title('Local Authority Counts')
-plt.xlabel('Local Authority')
-plt.ylabel('Count')
-
-col1.plotly_chart(fig,use_container_width=True)
+# display the chart in Streamlit
+st.altair_chart(chart)
 
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
