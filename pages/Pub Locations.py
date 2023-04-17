@@ -18,10 +18,10 @@ st.markdown("# Pub Locations")
 # Get user input for postal code or local authority
 location_type = st.radio("Choose a location type", ["Postal Code", "Local Authority"])
 if location_type == "Postal Code":
-    location_input = st.text_input("Enter a Postal Code")
+    location_input = st.selectbox("Select a Postal Code", df['postcode'].unique())
     pubs = df[df["postcode"] == location_input]
 else:
-    location_input = st.text_input("Enter a Local Authority")
+    location_input = st.text_input("Select a Local Authority")
     pubs = df[df["local_authority"] == location_input]
 
 # Display pubs on a map
