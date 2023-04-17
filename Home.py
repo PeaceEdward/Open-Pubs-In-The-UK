@@ -57,7 +57,7 @@ st.altair_chart(chart)
 
 count_name = df['name'].value_counts().to_frame().reset_index()
 count_name.columns = ['name', 'count']
-count_name_df=count_name[:5]
+count_name_df=count_name[:10]
 
 chart1 = alt.Chart(count_name_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
     x='count:Q',
