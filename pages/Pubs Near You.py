@@ -5,6 +5,8 @@ import folium
 import pandas as pd
 from geopy.distance import geodesic
 from folium.plugins import MarkerCluster
+from streamlit_folium import folium_static
+
 
 
 
@@ -27,4 +29,4 @@ m = folium.Map(location=[user_lat, user_lon], zoom_start=13)
 marker_cluster = MarkerCluster().add_to(m)
 for index, row in nearest_pubs.iterrows():
     folium.Marker(location=[row["latitude"], row["longitude"]], popup=row["name"]).add_to(marker_cluster)
-st.write(m)
+folium_static(m)
