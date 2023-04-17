@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 
 
@@ -38,12 +39,13 @@ count_df=count_la[:10]
 fig, ax = plt.subplots(figsize=(12, 6))
 count_df.plot(kind='bar', x='local_authority', y='count', ax=ax)
 
+col1,col2=st.columns(2)
 # Set the plot title and labels
 plt.title('Local Authority Counts')
 plt.xlabel('Local Authority')
 plt.ylabel('Count')
 
-# Show the plot in Streamlit
-st.pyplot(fig, width=0)
+col1.plotly_chart(fig,use_container_width=True)
+
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
