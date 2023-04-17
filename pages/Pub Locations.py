@@ -33,8 +33,7 @@ if len(pubs) > 0:
     m = folium.Map(location=[center_lat, center_lon], zoom_start=13)
     marker_cluster = MarkerCluster().add_to(m)
     for index, row in pubs.iterrows():
-        folium.Marker(location=[row["latitude"], row["longitude"]], popup=row["name"]).add_to(marker_cluster)
-        
+        folium.Marker(location=[row["latitude"], row["longitude"]], popup=row["name"]).add_to(marker_cluster)    
     folium_static(m)
 else:
     st.write("No pubs found in the specified location.")
