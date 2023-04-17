@@ -2,7 +2,6 @@ import os
 import streamlit as st
 import numpy as np
 import pandas as pd
-import seaborn as sns
 
 
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "uk_pubs.csv"))
