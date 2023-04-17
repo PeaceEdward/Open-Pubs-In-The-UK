@@ -26,6 +26,7 @@ st.markdown("Pubs are establishments that serve alcoholic beverages,such as beer
 st.markdown('This app helps you browse and explore pubs and clubs in the United Kingdom and find those nearest to you.')
 st.markdown("#### Data Summary")
 
+st.write('Sample data')
 st.dataframe(df.head(5))
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
