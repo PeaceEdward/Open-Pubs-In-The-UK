@@ -7,7 +7,8 @@ from folium.plugins import MarkerCluster
 
 
 
-df = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "pubs.csv"))
+filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "pubs.csv"))
+df=pd.read_csv(filepath)
 st.markdown("# Find the nearest Pub")
 
 # Get user input for their latitude and longitude
