@@ -23,8 +23,9 @@ st.write('<style> \
           </style>', unsafe_allow_html=True)
 
 st.markdown("Pubs are establishments that serve alcoholic beverages,such as beer, wine, and spirits,along with snacks and other simple meals. They are a popular social gathering places and fun hangout spots for you, your friends and family with a lively atmosphere.")
-st.markdown('This app helps you browse and explore pubs in the United Kingdom and find those nearest to you.')
+st.markdown('This app helps you browse and explore pubs and clubs in the United Kingdom and find those nearest to you.')
 st.markdown("#### Data Summary")
 
+st.dataframe(df.head(5))
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
