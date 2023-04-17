@@ -50,10 +50,12 @@ chart = alt.Chart(count_df).mark_bar(strokeOpacity=0, color='#d25151').encode(
 )            
             
            
-st.markdown('###### Pubs with the most branches')
 
 # display the chart in Streamlit
 st.altair_chart(chart)
+
+st.markdown('###### Pubs with the most branches')
+
 
 count_name = df['name'].value_counts().to_frame().reset_index()
 count_name.columns = ['name', 'count']
