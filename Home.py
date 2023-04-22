@@ -81,3 +81,14 @@ st.write("There are currently {} pubs in the dataset.".format(len(df)))
 
 st.write("The local authority with least number of pubs is West Lothian with only 2 pubs")
 
+
+st.write('Northern border: 60.764969')
+st.write('Southern border: 49.892485')
+st.write('Eastern border: 1.757763')
+st.write('Western border: -7.384525')
+
+st.write('There are {len(df['local_authorities'])}local authorities')
+
+st.write('There are 1273 locations where there are up to 2 pubs present')
+
+
