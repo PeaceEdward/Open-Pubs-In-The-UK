@@ -6,6 +6,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import altair as alt
 from itertools import combinations
+from geopy.distance import distance
 
 
 
