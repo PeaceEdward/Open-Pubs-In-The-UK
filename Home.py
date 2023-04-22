@@ -87,7 +87,7 @@ st.write('Southern border: 49.892485')
 st.write('Eastern border: 1.757763')
 st.write('Western border: -7.384525')
 
-st.write('There are {len(df['local_authorities'])}local authorities')
+st.write("There are {len(df['local_authorities'])}local authorities")
 
 st.write('There are 1273 locations where there are up to 2 pubs present')
 
