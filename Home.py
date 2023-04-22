@@ -95,6 +95,6 @@ distances = [distance(p[0], p[1]).km for p in pairs]
 
 # Calculate the average distance
 avg_distance = sum(distances) / len(distances)
-st.write("The average distance between longitude and latitude values is:", avg_distance, "km")
+st.write("The average distance between each pub location is:", avg_distance, "km")
 
 st.write("The local authority with least number of pubs is West Lothian with only 2 pubs")
