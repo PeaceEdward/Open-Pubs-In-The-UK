@@ -79,7 +79,7 @@ st.markdown('###### Summary statistics')
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
 
-st.write("There are {}local authorities.".format(len(df['local_authority'])))
+st.write("There are {}local authorities.".format(len(df['local_authority'].unique())))
 
 st.write("The local authority with least number of pubs is West Lothian with only 2 pubs")
 
