@@ -75,7 +75,7 @@ chart1 = alt.Chart(count_name_df).mark_bar(strokeOpacity=0, color='#d25151').enc
 st.altair_chart(chart1)
 
 
-st.markdown('###### Summary statistics')
+st.markdown('###### Summary Statistics')
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
 
