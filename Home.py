@@ -82,6 +82,9 @@ st.markdown('###### Summary statistics')
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
 
+st.write("The local authority with least number of pubs is West Lothian with only 2 pubs")
+
+
 # Extract latitude and longitude values from the DataFrame
 latitudes = df['latitude'].tolist()
 longitudes = df['longitude'].tolist()
@@ -97,4 +100,3 @@ distances = [distance(p[0], p[1]).km for p in pairs]
 avg_distance = sum(distances) / len(distances)
 st.write("The average distance between each pub location is:", avg_distance, "km")
 
-st.write("The local authority with least number of pubs is West Lothian with only 2 pubs")
