@@ -5,6 +5,8 @@ import pandas as pd
 from PIL import Image
 import matplotlib.pyplot as plt
 import altair as alt
+from itertools import combinations
+
 
 
 
@@ -78,4 +80,20 @@ st.altair_chart(chart1)
 st.markdown('###### Summary statistics')
 
 st.write("There are currently {} pubs in the dataset.".format(len(df)))
+
+# Extract latitude and longitude values from the DataFrame
+latitudes = df['latitude'].tolist()
+longitudes = df['longitude'].tolist()
+data = list(zip(latitudes, longitudes))
+
+# Create a list of all possible pairs of points
+pairs = combinations(data, 2)
+
+# Calculate the distance between each pair of points and store in a list
+distances = [distance(p[0], p[1]).km for p in pairs]
+
+# Calculate the average distance
+avg_distance = sum(distances) / len(distances)
+print("The average distance between longitude and latitude values is:", avg_distance, "km")
+
 st.write("The local authority with least number of pubs is West Lothian with only 2 pubs")
