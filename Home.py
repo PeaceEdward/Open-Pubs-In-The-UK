@@ -90,6 +90,6 @@ st.caption('The Borders Of the Dataset')
 st.write('Northern border:{}'.format(df['latitude'].max()))
 st.write('Southern border:{}'.format(df['latitude'].min()))
 st.write('Eastern border:{}'.format(df['longitude'].max()))
-st.write('Western border: {}'.format(df['longitude'].min())
+st.write('Western border: {}'.format(df['longitude'].min()))
 
 
